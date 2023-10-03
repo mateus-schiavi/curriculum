@@ -16,16 +16,30 @@ function Info() {
                 <p>Licencia de Conducir: B</p>
             </div>
             <div className='habilidades'>
-                Habilidades
+                <p>Habilidades</p>
                 <hr className='hr'/>
+                <p>Trabajo en equipo</p>
+                <p>Matemática</p>
+                <p>Programación</p>
+                <p>Raciocinio lógico</p>
             </div>
             <div className='idiomas'>
-                Idiomas
+                <p>Idiomas</p>
                 <hr className='hr'/>
+                <p>Inglés</p>
+                <p>Español</p>
+                <p>Italiano</p>
+                <p>Alemán</p>
+                <p>Japonés</p>
+                <p>Coreano</p>
             </div>
             <div className='intereses'>
                 Intereses
                 <hr className='hr'/>
+                <p>Desarollo Web</p>
+                <p>Front-end</p>
+                <p>Back-end</p>
+                <p>Full-Stack</p>
             </div>
         </div>
     )
