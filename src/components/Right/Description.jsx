@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Description() {
+    const [showEmpleo, setShowEmpleo] = useState(true);
+    const [showExperience, setShowExperience] = useState(true);
+    const [showEducacion, setShowEducacion] = useState(true);
     return (
         <div>
-            <div className='nombre'>
-                Schiavi, Mateus de Sousa
-                <p>Empleo</p>
-                <p className='busca'>Estoy buscando una oportunidad de empleo en el campo de la programación full-stack.
-                    Tengo un nivel avanzado de inglés y español, y actualmente estoy aprendiendo japonés, italiano, alemán y coreano.</p>
-            </div>
+            <button onClick={() => setShowEmpleo(!showEmpleo)}>
+                {showEmpleo ? 'Ocultar Empleo' : 'Mostrar Empleo'}
+            </button>
+            {showEmpleo && (
+                <div className='nombre'>
+                    Schiavi, Mateus de Sousa
+                    <p>Empleo</p>
+                    <p className='busca'>Estoy buscando una oportunidad de empleo en el campo de la programación full-stack.
+                        Tengo un nivel avanzado de inglés y español, y actualmente estoy aprendiendo japonés, italiano, alemán y coreano.</p>
+                </div>
+            )}
+
+            <button onClick={() => setShowExperience(!showExperience)}>
+                {showExperience ? 'Ocultar Experiencia' : 'Mostrar Experiencia'}
+            </button>
+            {showExperience && (
             <div className='profession'>
                 <p>EXPERIENCIA PROFISIONAL</p>
                 <hr />
@@ -30,6 +43,11 @@ function Description() {
                     </p>
                 </div>
             </div>
+            )}
+            <button onClick={() => setShowEducacion(!showEducacion)}>
+                {showEducacion ? 'Ocultar Educación' : 'Mostrar Educación'}
+            </button>
+            {showEducacion && (
             <div className='education'>
                 <p>EDUCACIÓN</p>
                 <hr />
@@ -81,6 +99,7 @@ function Description() {
                     </p>
                 </div>
             </div>
+            )}
         </div>
     )
 }
